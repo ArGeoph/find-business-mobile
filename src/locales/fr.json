@@ -1,0 +1,20 @@
+{
+  "address": "Adresse",
+  "best_match": "Meilleure",
+  "call": "Appel",
+  "closest": "Proche",
+  "code": "Code",
+  "description": "Description",
+  "most_reviewed": "Adsfasdvis",
+  "no_location_message": "L'adresse doit être fournie. S'il vous plaît vérifier votre entrée!",
+  "no_search_request_and_location_message": "La demande de recherche et l'adresse doivent être fournies. S'il vous plaît vérifier votre entrée!",
+  "no_search_request_message": "La demande de recherche doit être fournie. S'il vous plaît vérifier votre entrée!",
+  "open": "Ouvrir",
+  "price": "Prix",
+  "rating": "Évaluation",
+  "reviews": "Avis",
+  "search": "Chercher",
+  "search_request": "Demande de recherche",
+  "search_returned_nothing": "Votre recherche n'a rien donné. S'il vous plaît vérifier votre entrée!",
+  "wrong_api_message": "L'objet retourné ne peut pas être analysé! Vérifiez votre URL api!"
+}

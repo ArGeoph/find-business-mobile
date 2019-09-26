@@ -1,0 +1,20 @@
+{
+  "address": "Adresse",
+  "best_match": "Bester Treffer",
+  "call": "Anruf",
+  "closest": "Nächsten",
+  "code": "Code",
+  "description": "Beschreibung",
+  "most_reviewed": "Meisten überprüft",
+  "no_location_message": "Adresse muss angegeben werden. Bitte überprüfen Sie Ihre Eingaben!",
+  "no_search_request_and_location_message": "Suchanfrage und Adresse müssen angegeben werden. Bitte überprüfen Sie Ihre Eingaben!",
+  "no_search_request_message": "Suchanfrage muss angegeben werden. Bitte überprüfen Sie Ihre Eingaben!",
+  "open": "Öffnen",
+  "price": "Preis",
+  "rating": "Bewertung",
+  "reviews": "Bewertungen",
+  "search": "Suche",
+  "search_request": "Suchanfrage",
+  "search_returned_nothing": "Ihre Suche ergab nichts. Bitte überprüfen Sie Ihre Eingaben!",
+  "wrong_api_message": "Zurückgegebenes Objekt kann nicht analysiert werden! Überprüfen Sie Ihre API-URL!"
+}

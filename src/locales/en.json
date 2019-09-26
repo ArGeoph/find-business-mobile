@@ -1,0 +1,20 @@
+{
+  "address": "Address",
+  "best_match": "Best match",
+  "call": "Call",
+  "closest": "Closest",
+  "code": "Code",
+  "description": "Description",
+  "most_reviewed": "Most reviewed",
+  "no_location_message": "Address must be provided. Please check your input!",
+  "no_search_request_and_location_message": "Search request and address must be provided. Please check your input!",
+  "no_search_request_message": "Search request must be provided. Please check your input!",
+  "open": "Open",
+  "price": "Price",
+  "rating": "Rating",
+  "reviews": "Reviews",
+  "search": "Search",
+  "search_request": "Search request",
+  "search_returned_nothing": "Your search returned nothing. Please check your input!",
+  "wrong_api_message": "Returned object cannot be parsed! Check your api URL!"
+}

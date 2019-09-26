@@ -1,0 +1,20 @@
+{
+  "address": "Dirección",
+  "best_match": "Mejor partido",
+  "call": "Llamada",
+  "closest": "Más cercano",
+  "code": "Código",
+  "description": "Descripción",
+  "most_reviewed": "Más revisado",
+  "no_location_message": "Se debe proporcionar la dirección. Por favor revise su entrada!",
+  "no_search_request_and_location_message": "Se debe proporcionar la solicitud de búsqueda y la dirección. Por favor revise su entrada!",
+  "no_search_request_message": "Se debe proporcionar una solicitud de búsqueda. Por favor revise su entrada!",
+  "open": "Abierto",
+  "price": "Precio",
+  "rating": "Clasificación",
+  "reviews": "Comentarios",
+  "search": "Buscar",
+  "search_request": "Solicitud de búsqueda",
+  "search_returned_nothing": "Su búsqueda no devolvió nada. Por favor revise su entrada!",
+  "wrong_api_message": "¡El objeto devuelto no se puede analizar! ¡Comprueba tu URL de API!"
+}
