@@ -104,7 +104,6 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
-    width: "100%",
     fontSize: 5
   },
   sortButton: {
@@ -117,8 +116,7 @@ export const styles = StyleSheet.create({
     borderRadius: 3
   },
   activeSortButton: {
-    width: 92,
-    flex: -1,
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#f779ee",
@@ -133,12 +131,8 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center"
   },
-  flatList: {
-    width: "100%"
-  },
   businessesList: {
-    width: "100%",
-    height: 640,
+    flex: 1,
     borderColor: "black",
     borderWidth: 1,
     borderRadius: 5,
