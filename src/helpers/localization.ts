@@ -7,6 +7,7 @@ import fr from "../locales/fr.json";
 import es from "../locales/es.json";
 import de from "../locales/de.json";
 import ru from "../locales/ru.json";
+import hi from "../locales/hi.json";
 
 // Should the app fallback to English if user locale doesn't exists
 I18n.fallbacks = true;
@@ -17,7 +18,8 @@ I18n.translations = {
   fr,
   es,
   de,
-  ru
+  ru,
+  hi
 };
 
 const currentLocale = I18n.currentLocale();

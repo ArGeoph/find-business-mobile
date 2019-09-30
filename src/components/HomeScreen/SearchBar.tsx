@@ -69,6 +69,7 @@ const SearchBar = (props: any) => {
             <Picker.Item label="ES" value="es" />
             <Picker.Item label="DE" value="de" />
             <Picker.Item label="RU" value="ru" />
+            <Picker.Item label="HI" value="hi" />
           </Picker>
         </View>
       </View>
