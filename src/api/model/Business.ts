@@ -1,5 +1,6 @@
-
-
+/**
+ * Interface describing the business object
+ */
 export interface Business {
     key: string;
     id: string;
@@ -14,5 +15,5 @@ export interface Business {
     priceRange: string;
     latitude: string;
     longitude: string;
-}
+} // End of interface
 // End of file

@@ -22,6 +22,7 @@ import { makePhoneCall } from "../../helpers/makePhoneCall";
 /**
  * Functional component: Search Results
  * Description: renders a list of businesses passed as an array in props.businesses
+ * @params props
  */
 const SearchResults = (props: any) => {
   const {
@@ -38,7 +39,6 @@ const SearchResults = (props: any) => {
     console.log("SearchResults::Render");
     return (
       <FlatList
-        style={styles.flatList}
         refreshControl={
           <RefreshControl
             onRefresh={() => {

@@ -48,12 +48,12 @@ class HomeScreen extends React.Component<Props, State> {
     const { isLoading } = this.props;
 
     return (
-      <>
+      <View>
         <SearchBar {...this.props} />
         <ErrorMessage {...this.props} />
         <SearchResults {...this.props} />
         <Spinner isLoading={isLoading} />
-      </>
+      </View>
     );
   }
 } // End of class

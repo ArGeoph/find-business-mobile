@@ -7,7 +7,6 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   searchBar: {
     alignItems: "center",
-    width: "100%",
     height: 280
   },
   topHeaderContainerIOS: {
@@ -20,7 +19,6 @@ export const styles = StyleSheet.create({
   },
   topHeaderContainerAndroid: {
     width: "100%",
-    height: 45,
     flex: -1,
     flexDirection: "row",
     justifyContent: "space-between"
@@ -31,7 +29,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "black",
     borderRadius: 0,
-    backgroundColor: "green"
+    backgroundColor: "orange"
   },
   picker: {
     height: 35,
@@ -181,7 +179,7 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "black",
     borderRadius: 3,
-    backgroundColor: "green"
+    backgroundColor: "orange"
   },
   inactiveBusinessButton: {
     width: 110,
