@@ -108,8 +108,7 @@ export const styles = StyleSheet.create({
     fontSize: 5
   },
   sortButton: {
-    width: 93,
-    flex: -1,
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "#009dff",
