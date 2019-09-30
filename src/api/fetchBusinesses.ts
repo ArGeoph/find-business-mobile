@@ -6,7 +6,6 @@ import { strings } from "../helpers/localization";
 import { apiKey } from "./apiKey";
 
 const apiUrl = "https://api.yelp.com/v3/businesses/search?term=";
-// const apiUrl = "https://www.justbeerapp.com/api/v8/articles";
 
 /**
  *

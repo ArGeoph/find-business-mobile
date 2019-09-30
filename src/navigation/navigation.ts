@@ -3,7 +3,8 @@
  */
 import HomeScreen from "../screens/HomeScreen";
 import { BusinessWebView } from "../screens/BusinessWebView";
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
 import { PageNotFound } from "../screens/PageNotFound";
 
 // Step 1. Create React Native routes

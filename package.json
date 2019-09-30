@@ -17,7 +17,8 @@
     "react-native-i18n": "2.0.15",
     "react-native-vector-icons": "6.6.0",
     "react-native-webview": "7.2.5",
-    "react-navigation": "^3.0.7",
+    "react-navigation": "4.0.10",
+    "react-navigation-stack": "^1.9.1",
     "react-redux": "7.1.1",
     "redux": "4.0.4",
     "redux-thunk": "2.3.0"
@@ -37,12 +38,12 @@
     "@types/react-test-renderer": "^16.8.3",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
-    "babel-jest": "^24.8.0",
-    "eslint": "6.4.0",
-    "jest": "^24.8.0",
+    "babel-jest": "24.9.0",
+    "eslint": "6.5.0",
+    "jest": "24.9.0",
     "metro-react-native-babel-preset": "^0.55.0",
-    "react-test-renderer": "16.8.6",
-    "typescript": "^3.5.3"
+    "react-test-renderer": "16.10.1",
+    "typescript": "^3.6.3"
   },
   "jest": {
     "preset": "react-native"

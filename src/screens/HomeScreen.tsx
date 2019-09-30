@@ -14,6 +14,8 @@ import {
   changeSortingParameter
 } from "../state/actions/actions";
 import searchBusinesses from "../state/actions/searchBusinesses";
+import { Business } from "../api/model/Business";
+
 /**
  * Interfaces
  */
@@ -21,7 +23,7 @@ interface Props {
   navigation: any;
   isRefreshing: boolean;
   isLoading: boolean;
-  businesses: [];
+  businesses: Business[];
 }
 
 interface State {}
@@ -46,12 +48,12 @@ class HomeScreen extends React.Component<Props, State> {
     const { isLoading } = this.props;
 
     return (
-      <View>
+      <>
         <SearchBar {...this.props} />
         <ErrorMessage {...this.props} />
         <SearchResults {...this.props} />
         <Spinner isLoading={isLoading} />
-      </View>
+      </>
     );
   }
 } // End of class
@@ -84,4 +86,5 @@ const mapDispatchToProps = (dispatch: any) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(HomeScreen); // End of file
+)(HomeScreen); 
+// End of file
