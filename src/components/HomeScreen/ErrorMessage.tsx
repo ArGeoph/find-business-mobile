@@ -1,16 +1,16 @@
 /**
  * Imports
  */
-import { Text, View } from "react-native";
-import { styles } from "../../resources/styles/styles";
 import React from "react";
+import { Text, View } from "react-native";
+import { styles } from "../../theme/styles";
 
 /**
  * Functional component
  * @param props
  * Description: returns the error message component with error message passed as a prop
  */
-export const ErrorMessage = (props: any) => {
+export const ErrorMessage = React.memo(function (props: any) {
   const { errorMessage } = props;
 
   if (errorMessage !== "") {
@@ -25,5 +25,5 @@ export const ErrorMessage = (props: any) => {
   } else {
     return null;
   }
-}; // End of functional component
+}); // End of functional component
 // End of file

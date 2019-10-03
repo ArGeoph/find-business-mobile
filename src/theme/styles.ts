@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
   },
   topHeaderContainer: {
     width: "100%",
-    flex: -1,
     flexDirection: "row",
     justifyContent: "space-between"
   },
@@ -26,16 +25,12 @@ export const styles = StyleSheet.create({
   picker: {
     height: 35,
     width: 85,
-    backgroundColor: "white",
-    padding: 0,
-    margin: 0
+    backgroundColor: "white"
   },
   pickerItem: {
     textAlign: "left",
     height: 40,
-    width: 85,
-    padding: 0,
-    margin: 0
+    width: 85
   },
   inputFieldsContainer: {
     flex: 1,
@@ -49,12 +44,16 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: "black",
     borderWidth: 1,
-    color: "black",
     backgroundColor: "white",
     marginBottom: 10,
     paddingLeft: 10,
     alignItems: "center",
     justifyContent: "center"
+  },
+  addressInputFieldContainer: { 
+    flex: 1,
+    flexDirection: "row", 
+    height: 37 
   },
   addressInputField: {
     height: 37,
@@ -62,7 +61,6 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     borderColor: "black",
     borderWidth: 1,
-    color: "black",
     backgroundColor: "white",
     marginBottom: 10,
     paddingLeft: 10,
@@ -122,7 +120,6 @@ export const styles = StyleSheet.create({
     textAlign: "center"
   },
   businessesList: {
-    flex: 1,
     borderColor: "black",
     borderWidth: 1,
     borderRadius: 5,
@@ -147,14 +144,12 @@ export const styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    flexWrap: "nowrap",
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
     height: 250,
     marginTop: 10,
-    marginBottom: 10,
-    alignSelf: "center"
+    marginBottom: 10
   },
   businessImage: {
     flex: 1,

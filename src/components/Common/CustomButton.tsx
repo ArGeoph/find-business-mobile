@@ -1,15 +1,15 @@
 /**
  * Imports
  */
-import { Text, TouchableOpacity, ActivityIndicator } from "react-native";
 import React from "react";
+import { Text, TouchableOpacity, ActivityIndicator } from "react-native";
 
 /**
  * Functional component CustomButton
  * @param props
  * Description: returns a custom button
  */
-export const CustomButton = (props: any) => {
+export const CustomButton = React.memo(function CustomButton (props: any) {
   return (
     <TouchableOpacity style={props.style} onPress={props.onPress}>
       {props.isLoading ? (
@@ -24,5 +24,5 @@ export const CustomButton = (props: any) => {
       )}
     </TouchableOpacity>
   );
-}; // End of functional component
+}); // End of functional component
 // End of file

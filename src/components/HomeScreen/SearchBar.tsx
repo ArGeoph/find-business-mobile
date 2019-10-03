@@ -3,10 +3,13 @@
  */
 import React, { useState } from "react";
 import { ImageBackground, TextInput, View, Picker, SafeAreaView } from "react-native";
-import { styles } from "../../resources/styles/styles";
 import { CustomButton } from "../Common/CustomButton";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { Button } from "react-native-elements";
+
+// Import styles
+import { styles } from "../../theme/styles";
+import { Colors, Sizes } from "../../theme/GlobalStyles";
 
 // Import helpers
 import { getCoordinatesFromDeviceGPS } from "../../helpers/getCoordinatesFromDeviceGPS";
@@ -17,7 +20,7 @@ import { strings } from "../../helpers/localization";
  * @param props
  * Description: returns the Search Bar component
  */
-const SearchBar = (props: any) => {
+const SearchBar = React.memo(function SearchBar (props: any) {
   console.log("SearchBar::Render");
 
   const {
@@ -61,7 +64,7 @@ const SearchBar = (props: any) => {
           }
         />
     );
-  };
+  }; // End of method returning button
 
   // Return corresponding JSX
   return (
@@ -75,7 +78,7 @@ const SearchBar = (props: any) => {
       >
         <Button
           buttonStyle={styles.topHeaderMenuButton}
-          icon={<Icon name="bars" size={17} color="white" />}
+          icon={<Icon name="tools" size={Sizes.iconSize} color="white" />}
           iconRight
         />
 
@@ -107,7 +110,7 @@ const SearchBar = (props: any) => {
           value={localTerm}
         />
 
-        <View style={{ flex: 1, flexDirection: "row", height: 37 }}>
+        <View style={styles.addressInputFieldContainer}>
           <TextInput
             style={styles.addressInputField}
             placeholder={strings("address")}
@@ -116,7 +119,7 @@ const SearchBar = (props: any) => {
           />
           <Button
             buttonStyle={styles.geolocationButton}
-            icon={<Icon name="location-arrow" size={15} color="black" />}
+            icon={<Icon name="location-arrow" size={Sizes.iconSize} color="black" />}
             onPress={() => getCoordinatesFromDeviceGPS(setLocation)}
             iconRight
           />
@@ -143,7 +146,7 @@ const SearchBar = (props: any) => {
       </View>
     </ImageBackground>
   );
-}; // End of functional component
+}); // End of functional component
 
 export default SearchBar;
 // End of file

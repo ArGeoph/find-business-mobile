@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-// React imports
+import React from "react";
 import {
   FlatList,
   Image,
@@ -10,10 +10,13 @@ import {
   TouchableOpacity,
   View
 } from "react-native";
-import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome5";
-import { styles } from "../../resources/styles/styles";
 import { Button, Rating } from "react-native-elements";
+
+// Import styles
+import { styles } from "../../theme/styles";
+import { Sizes} from "../../theme/GlobalStyles";
+
 // Import helpers
 import { strings } from "../../helpers/localization";
 import { openAddressInMapApp } from "../../helpers/openAddressInMapApp";
@@ -24,7 +27,7 @@ import { makePhoneCall } from "../../helpers/makePhoneCall";
  * Description: renders a list of businesses passed as an array in props.businesses
  * @params props
  */
-const SearchResults = (props: any) => {
+const SearchResults = React.memo(function (props: any) {
   const {
     term,
     location,
@@ -83,10 +86,8 @@ const SearchResults = (props: any) => {
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
                   title={strings("open")}
-                  icon={<Icon name="map-marked-alt" size={17} color="white" />}
-                  onPress={() =>
-                    openAddressInMapApp(`${item.address} ${item.city}`)
-                  }
+                  icon={<Icon name="map-marked-alt" size={Sizes.iconSize} color="white" />}
+                  onPress={() => openAddressInMapApp(`${item.address} ${item.city}`)}
                   iconRight
                 />
                 <Text style={styles.businessContent}>
@@ -98,7 +99,7 @@ const SearchResults = (props: any) => {
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
                   title={strings("call")}
-                  icon={<Icon name="phone" size={17} color="white" />}
+                  icon={<Icon name="phone" size={Sizes.iconSize} color="white" />}
                   onPress={() => makePhoneCall(item.phone)}
                   iconRight
                 />
@@ -109,13 +110,13 @@ const SearchResults = (props: any) => {
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
                   title={strings("rating")}
-                  icon={<Icon name="smile" size={17} color="white" />}
+                  icon={<Icon name="smile" size={Sizes.iconSize} color="white" />}
                   iconRight
                 />
                 <View style={styles.ratingContainer}>
                   <Rating
                     showRating={false}
-                    imageSize={15}
+                    imageSize={Sizes.iconSize}
                     startingValue={item.rating}
                     fractions={1}
                   />
@@ -126,7 +127,7 @@ const SearchResults = (props: any) => {
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
                   title={strings("reviews")}
-                  icon={<Icon name="sort-numeric-up" size={17} color="white" />}
+                  icon={<Icon name="sort-numeric-up" size={Sizes.iconSize} color="white" />}
                   iconRight
                 />
                 <Text style={styles.businessContent}>{item.reviewCount}</Text>
@@ -136,7 +137,7 @@ const SearchResults = (props: any) => {
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
                   title={strings("price")}
-                  icon={<Icon name="dollar-sign" size={17} color="white" />}
+                  icon={<Icon name="dollar-sign" size={Sizes.iconSize} color="white" />}
                   iconRight
                 />
                 <Text style={styles.businessContent}>{item.priceRange}</Text>
@@ -156,7 +157,7 @@ const SearchResults = (props: any) => {
   } else {
     return null;
   }
-}; // End of functional component
+}); // End of functional component
 
 export default SearchResults;
 // End of file

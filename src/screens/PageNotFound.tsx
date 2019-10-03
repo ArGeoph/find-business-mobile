@@ -3,7 +3,7 @@
  */
 import React from "react";
 import { View, Text } from "react-native";
-import { styles } from "../resources/styles/styles";
+import { styles } from "../theme/styles";
 
 /**
  * Functional Component: PageNotFound

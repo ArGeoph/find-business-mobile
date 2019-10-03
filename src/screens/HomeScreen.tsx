@@ -29,11 +29,11 @@ interface Props {
 interface State {}
 
 /**
- * Description: renders search bar with two input field and businesses search results if any
+ * Renders search bar with two input fields and businesses search results if any
  * Class: HomeScreen
  *
  */
-class HomeScreen extends React.Component<Props, State> {
+class HomeScreen extends React.PureComponent<Props, State> {
   /**
    * Constructor
    * @param props 
@@ -87,8 +87,5 @@ const mapDispatchToProps = (dispatch: any) => ({
     dispatch(searchBusinesses(term, location, sortBy))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HomeScreen); 
+export default connect(mapStateToProps,mapDispatchToProps)(HomeScreen); 
 // End of file
