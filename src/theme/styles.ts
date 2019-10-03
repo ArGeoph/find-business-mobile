@@ -35,8 +35,7 @@ export const styles = StyleSheet.create({
   inputFieldsContainer: {
     flex: 1,
     alignItems: "center",
-    width: "100%",
-    marginTop: 25
+    justifyContent: 'center'
   },
   inputField: {
     height: 38,
@@ -62,7 +61,6 @@ export const styles = StyleSheet.create({
     borderColor: "black",
     borderWidth: 1,
     backgroundColor: "white",
-    marginBottom: 10,
     paddingLeft: 10,
     alignItems: "center",
     justifyContent: "center",
@@ -78,21 +76,19 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 1,
     borderColor: "black",
-    marginBottom: 15
+    marginBottom: 25
   },
   searchButtonTextStyle: {
     paddingTop: 9,
     paddingBottom: 9,
     color: "white",
-    fontSize: 13,
+    fontSize: 14,
     fontWeight: "bold",
     textAlign: "center"
   },
   sortButtonsContainer: {
     flexDirection: "row",
-    flexWrap: "wrap",
     justifyContent: "center",
-    fontSize: 5
   },
   sortButton: {
     flex: 1,
@@ -115,7 +111,7 @@ export const styles = StyleSheet.create({
     paddingTop: 8,
     paddingBottom: 8,
     color: "white",
-    fontSize: 11,
+    fontSize: 14,
     fontWeight: "bold",
     textAlign: "center"
   },
@@ -124,20 +120,16 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 5,
     paddingTop: 10,
-    marginBottom: 5,
-    color: "black"
+    marginBottom: 5
   },
   businessHeader: {
-    alignItems: "center",
     textAlign: "center",
     fontWeight: "bold",
-    color: "black",
     fontSize: 26,
     marginBottom: 10
   },
   businessContent: {
     paddingLeft: 5,
-    color: "black",
     fontSize: 16,
     paddingTop: 5,
     fontWeight: "bold"
@@ -167,12 +159,6 @@ export const styles = StyleSheet.create({
     borderColor: "black",
     borderRadius: 3,
     backgroundColor: "orange"
-  },
-  inactiveBusinessButton: {
-    width: 110,
-    height: 35,
-    borderRadius: 3,
-    backgroundColor: "white"
   },
   businessButtonContainer: {
     flexDirection: "row",

@@ -76,11 +76,18 @@ const SearchBar = React.memo(function SearchBar (props: any) {
       <View
         style={styles.topHeaderContainer}
       >
-        <Button
-          buttonStyle={styles.topHeaderMenuButton}
-          icon={<Icon name="tools" size={Sizes.iconSize} color="white" />}
-          iconRight
-        />
+        <View >
+          <Button
+            buttonStyle={styles.topHeaderMenuButton}
+            icon={<Icon name="tools" size={Sizes.iconSize} color="white" />}
+            iconRight
+          />
+          <Button
+            buttonStyle={styles.topHeaderMenuButton}
+            icon={<Icon name="star" size={Sizes.iconSize} color="white" />}
+            iconRight
+          />
+        </View>
 
         {/* Language dropdown list */}
         <View>
@@ -119,7 +126,7 @@ const SearchBar = React.memo(function SearchBar (props: any) {
           />
           <Button
             buttonStyle={styles.geolocationButton}
-            icon={<Icon name="location-arrow" size={Sizes.iconSize} color="black" />}
+            icon={<Icon name="location-arrow" size={Sizes.iconSize} />}
             onPress={() => getCoordinatesFromDeviceGPS(setLocation)}
             iconRight
           />
