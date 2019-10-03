@@ -9,15 +9,7 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     height: 280
   },
-  topHeaderContainerIOS: {
-    marginTop: 30,
-    width: "100%",
-    height: 45,
-    flex: -1,
-    flexDirection: "row",
-    justifyContent: "space-between"
-  },
-  topHeaderContainerAndroid: {
+  topHeaderContainer: {
     width: "100%",
     flex: -1,
     flexDirection: "row",

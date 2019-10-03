@@ -34,6 +34,10 @@ interface State {}
  *
  */
 class HomeScreen extends React.Component<Props, State> {
+  /**
+   * Constructor
+   * @param props 
+   */
   constructor(props: any) {
     super(props);
     console.log("HomeScreen::Constructor");
