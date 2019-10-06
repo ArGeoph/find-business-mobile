@@ -2,7 +2,13 @@
  * Imports
  */
 import React, { useState } from "react";
-import { ImageBackground, TextInput, View, Picker, SafeAreaView } from "react-native";
+import {
+  ImageBackground,
+  TextInput,
+  View,
+  Picker,
+  SafeAreaView,
+} from "react-native";
 import { CustomButton } from "../Common/CustomButton";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import { Button } from "react-native-elements";
@@ -20,7 +26,7 @@ import { strings } from "../../helpers/localization";
  * @param props
  * Description: returns the Search Bar component
  */
-const SearchBar = React.memo(function SearchBar (props: any) {
+const SearchBar = React.memo(function SearchBar(props: any) {
   console.log("SearchBar::Render");
 
   const {
@@ -39,30 +45,28 @@ const SearchBar = React.memo(function SearchBar (props: any) {
   const [localLocation, setLocation] = useState("");
 
   /** Returns button with the label passed in as a parameter
-   * 
-   * @param buttonName 
+   *
+   * @param buttonName
    */
   const renderButton = (buttonLabel: string) => {
     return (
       <CustomButton
-          onPress={() => {
-            if (sortBy !== buttonLabel) {
-              onSortByChange(buttonLabel);
+        onPress={() => {
+          if (sortBy !== buttonLabel) {
+            onSortByChange(buttonLabel);
 
-              if (localTerm !== "" && localLocation !== "") {
-                onResultsRefresh(localTerm, localLocation, buttonLabel);
-              }
+            if (localTerm !== "" && localLocation !== "") {
+              onResultsRefresh(localTerm, localLocation, buttonLabel);
             }
-          }}
-          isLoading={false}
-          title={strings(buttonLabel)}
-          buttonTextStyle={styles.sortButtonTextStyle}
-          style={
-            sortBy === buttonLabel
-              ? styles.activeSortButton
-              : styles.sortButton
           }
-        />
+        }}
+        isLoading={false}
+        title={strings(buttonLabel)}
+        buttonTextStyle={styles.sortButtonTextStyle}
+        style={
+          sortBy === buttonLabel ? styles.activeSortButton : styles.sortButton
+        }
+      />
     );
   }; // End of method returning button
 
@@ -72,11 +76,9 @@ const SearchBar = React.memo(function SearchBar (props: any) {
       source={require("../../resources/images/background_search_mobile.jpg")}
       style={styles.searchBar}
     >
-      <SafeAreaView></SafeAreaView>
-      <View
-        style={styles.topHeaderContainer}
-      >
-        <View >
+      <SafeAreaView />
+      <View style={styles.topHeaderContainer}>
+        <View>
           <Button
             buttonStyle={styles.topHeaderMenuButton}
             icon={<Icon name="tools" size={Sizes.iconSize} color="white" />}
@@ -104,6 +106,8 @@ const SearchBar = React.memo(function SearchBar (props: any) {
             <Picker.Item label="DE" value="de" />
             <Picker.Item label="RU" value="ru" />
             <Picker.Item label="HI" value="hi" />
+            <Picker.Item label="JA" value="ja" />
+            <Picker.Item label="ZH" value="zh" />
           </Picker>
         </View>
       </View>

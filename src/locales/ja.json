@@ -1,0 +1,20 @@
+{
+  "address": "住所",
+  "best_match": "ベストマッチ",
+  "call": "コール",
+  "distance": "一番近い",
+  "code": "コード",
+  "description": "Description",
+  "review_count": "説明",
+  "no_location_message": "住所を入力する必要があります。入力を確認してください！",
+  "no_search_request_and_location_message": "検索リクエストと住所を提供する必要があります。入力を確認してください！",
+  "no_search_request_message": "検索リクエストを提供する必要があります。入力を確認してください！",
+  "open": "開いた",
+  "price": "価格",
+  "rating": "格付け",
+  "reviews": "レビュー",
+  "search": "調べる",
+  "search_request": "検索リクエスト",
+  "search_returned_nothing": "検索は何も返しませんでした。入力を確認してください！",
+  "wrong_api_message": "返されたオブジェクトは解析できません！ API URLを確認してください！"
+}
