@@ -1,14 +1,14 @@
 /**
  * Imports
  */
-import { Linking, Platform } from "react-native";
+import { Linking, Platform } from 'react-native';
 
 // Method making phone calls
 export const makePhoneCall = (phoneNumber: string) => {
   let phoneNumberWithPrefix: string;
 
   // Prepare phone number based on the platform
-  if (Platform.OS === "android") {
+  if (Platform.OS === 'android') {
     phoneNumberWithPrefix = `tel:${phoneNumber}`;
   } else {
     phoneNumberWithPrefix = `telprompt:${phoneNumber}`;
@@ -20,7 +20,7 @@ export const makePhoneCall = (phoneNumber: string) => {
       if (isSupported) {
         Linking.openURL(phoneNumberWithPrefix);
       } else {
-        console.log("Phone calls are not supported");
+        console.log('Phone calls are not supported');
       }
     })
     .catch(error => {

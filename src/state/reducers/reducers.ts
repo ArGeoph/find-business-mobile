@@ -6,7 +6,7 @@ import {
   FETCH_BUSINESSES_BEGIN,
   FETCH_BUSINESSES_SUCCESS,
   FETCH_BUSINESSES_FAILURE
-} from "../actions/actionTypes";
+} from '../actions/actionTypes';
 
 // Root Reducer
 const rootReducer = (state: any, action: any) => {
@@ -32,7 +32,7 @@ const rootReducer = (state: any, action: any) => {
         term: action.term,
         location: action.location,
         sortBy: action.sortBy,
-        errorMessage: "",
+        errorMessage: '',
         isLoading: true
       };
 
@@ -40,7 +40,7 @@ const rootReducer = (state: any, action: any) => {
       console.log(action);
       return {
         ...state,
-        errorMessage: "",
+        errorMessage: '',
         businesses: action.businesses,
         isLoading: false,
         isSearchButtonClicked: false

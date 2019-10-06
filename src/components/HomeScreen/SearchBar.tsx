@@ -1,33 +1,33 @@
 /**
  * Imports
  */
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   ImageBackground,
   TextInput,
   View,
   Picker,
   SafeAreaView,
-} from "react-native";
-import { CustomButton } from "../Common/CustomButton";
-import Icon from "react-native-vector-icons/FontAwesome5";
-import { Button } from "react-native-elements";
+} from 'react-native';
+import { CustomButton } from '../Common/CustomButton';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import { Button } from 'react-native-elements';
 
 // Import styles
-import { styles } from "../../theme/styles";
-import { Colors, Sizes } from "../../theme/GlobalStyles";
+import { styles } from '../../theme/styles';
+import { Colors, Sizes } from '../../theme/GlobalStyles';
 
 // Import helpers
-import { getCoordinatesFromDeviceGPS } from "../../helpers/getCoordinatesFromDeviceGPS";
-import { strings } from "../../helpers/localization";
+import { getCoordinatesFromDeviceGPS } from '../../helpers/getCoordinatesFromDeviceGPS';
+import { strings } from '../../helpers/localization';
 
 /**
  * Functional component
- * @param props
  * Description: returns the Search Bar component
+ * @param props
  */
 const SearchBar = React.memo(function SearchBar(props: any) {
-  console.log("SearchBar::Render");
+  console.log('SearchBar::Render');
 
   const {
     onLocaleChange,
@@ -41,12 +41,11 @@ const SearchBar = React.memo(function SearchBar(props: any) {
   } = props;
 
   // React Hooks
-  const [localTerm, setTerm] = useState("");
-  const [localLocation, setLocation] = useState("");
+  const [localTerm, setTerm] = useState('');
+  const [localLocation, setLocation] = useState('');
 
   /** Returns button with the label passed in as a parameter
-   *
-   * @param buttonName
+   * @param {string} buttonLabel
    */
   const renderButton = (buttonLabel: string) => {
     return (
@@ -55,14 +54,14 @@ const SearchBar = React.memo(function SearchBar(props: any) {
           if (sortBy !== buttonLabel) {
             onSortByChange(buttonLabel);
 
-            if (localTerm !== "" && localLocation !== "") {
+            if (localTerm !== '' && localLocation !== '') {
               onResultsRefresh(localTerm, localLocation, buttonLabel);
             }
           }
         }}
         isLoading={false}
         title={strings(buttonLabel)}
-        buttonTextStyle={styles.sortButtonTextStyle}
+        buttonTextStyle={styles.searchBarButtonTextStyle}
         style={
           sortBy === buttonLabel ? styles.activeSortButton : styles.sortButton
         }
@@ -73,7 +72,7 @@ const SearchBar = React.memo(function SearchBar(props: any) {
   // Return corresponding JSX
   return (
     <ImageBackground
-      source={require("../../resources/images/background_search_mobile.jpg")}
+      source={require('../../resources/images/background_search_mobile.jpg')}
       style={styles.searchBar}
     >
       <SafeAreaView />
@@ -81,12 +80,12 @@ const SearchBar = React.memo(function SearchBar(props: any) {
         <View>
           <Button
             buttonStyle={styles.topHeaderMenuButton}
-            icon={<Icon name="tools" size={Sizes.iconSize} color="white" />}
+            icon={<Icon name='tools' size={Sizes.iconSize} color='white' />}
             iconRight
           />
           <Button
             buttonStyle={styles.topHeaderMenuButton}
-            icon={<Icon name="star" size={Sizes.iconSize} color="white" />}
+            icon={<Icon name='star' size={Sizes.iconSize} color='white' />}
             iconRight
           />
         </View>
@@ -94,20 +93,20 @@ const SearchBar = React.memo(function SearchBar(props: any) {
         {/* Language dropdown list */}
         <View>
           <Picker
-            mode="dropdown"
+            mode='dropdown'
             itemStyle={styles.pickerItem}
             selectedValue={locale}
             style={styles.picker}
             onValueChange={itemValue => onLocaleChange(itemValue)}
           >
-            <Picker.Item label="EN" value="en" />
-            <Picker.Item label="FR" value="fr" />
-            <Picker.Item label="ES" value="es" />
-            <Picker.Item label="DE" value="de" />
-            <Picker.Item label="RU" value="ru" />
-            <Picker.Item label="HI" value="hi" />
-            <Picker.Item label="JA" value="ja" />
-            <Picker.Item label="ZH" value="zh" />
+            <Picker.Item label='EN' value='en' />
+            <Picker.Item label='FR' value='fr' />
+            <Picker.Item label='ES' value='es' />
+            <Picker.Item label='DE' value='de' />
+            <Picker.Item label='RU' value='ru' />
+            <Picker.Item label='HI' value='hi' />
+            <Picker.Item label='JA' value='ja' />
+            <Picker.Item label='ZH' value='zh' />
           </Picker>
         </View>
       </View>
@@ -116,7 +115,7 @@ const SearchBar = React.memo(function SearchBar(props: any) {
       <View style={styles.inputFieldsContainer}>
         <TextInput
           style={styles.inputField}
-          placeholder={strings("search_request")}
+          placeholder={strings('search_request')}
           onChangeText={event => setTerm(event)}
           value={localTerm}
         />
@@ -124,13 +123,13 @@ const SearchBar = React.memo(function SearchBar(props: any) {
         <View style={styles.addressInputFieldContainer}>
           <TextInput
             style={styles.addressInputField}
-            placeholder={strings("address")}
+            placeholder={strings('address')}
             onChangeText={event => setLocation(event)}
             value={localLocation}
           />
           <Button
             buttonStyle={styles.geolocationButton}
-            icon={<Icon name="location-arrow" size={Sizes.iconSize} />}
+            icon={<Icon name='location-arrow' size={Sizes.iconSize} />}
             onPress={() => getCoordinatesFromDeviceGPS(setLocation)}
             iconRight
           />
@@ -142,9 +141,9 @@ const SearchBar = React.memo(function SearchBar(props: any) {
             onSearchButtonClicked(localTerm, localLocation, sortBy);
           }}
           isLoading={isLoading && isSearchButtonClicked}
-          title={strings("search")}
+          title={strings('search')}
           style={styles.searchButton}
-          buttonTextStyle={styles.searchButtonTextStyle}
+          buttonTextStyle={styles.searchBarButtonTextStyle}
         />
       </View>
 

@@ -1,20 +1,20 @@
 /**
  * Imports
  */
-import React from "react";
-import { View } from "react-native";
-import SearchResults from "../components/HomeScreen/SearchResults";
-import { ErrorMessage } from "../components/HomeScreen/ErrorMessage";
-import { Spinner } from "../components/Common/Spinner";
-import SearchBar from "../components/HomeScreen/SearchBar";
-import { connect } from "react-redux";
+import React from 'react';
+import { View } from 'react-native';
+import SearchResults from '../components/HomeScreen/SearchResults';
+import { ErrorMessage } from '../components/HomeScreen/ErrorMessage';
+import { Spinner } from '../components/Common/Spinner';
+import SearchBar from '../components/HomeScreen/SearchBar';
+import { connect } from 'react-redux';
 import {
   searchButtonClicked,
   setAppLocale,
   changeSortingParameter
-} from "../state/actions/actions";
-import searchBusinesses from "../state/actions/searchBusinesses";
-import { Business } from "../api/model/Business";
+} from '../state/actions/actions';
+import searchBusinesses from '../state/actions/searchBusinesses';
+import { Business } from '../api/model/Business';
 
 /**
  * Interfaces
@@ -36,11 +36,11 @@ interface State {}
 class HomeScreen extends React.PureComponent<Props, State> {
   /**
    * Constructor
-   * @param props 
+   * @param props
    */
   constructor(props: any) {
     super(props);
-    console.log("HomeScreen::Constructor");
+    console.log('HomeScreen::Constructor');
     console.log(`HomeScreen::Initial Props[${props}]`);
   }
 
@@ -48,7 +48,7 @@ class HomeScreen extends React.PureComponent<Props, State> {
    * Primary render function
    */
   render() {
-    console.log("HomeScreen::Render");
+    console.log('HomeScreen::Render');
     const { isLoading } = this.props;
 
     return (
@@ -87,5 +87,8 @@ const mapDispatchToProps = (dispatch: any) => ({
     dispatch(searchBusinesses(term, location, sortBy))
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(HomeScreen); 
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HomeScreen);
 // End of file

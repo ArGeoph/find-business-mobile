@@ -1,23 +1,28 @@
 /**
  * Imports
  */
-import React from "react";
-import { Text, TouchableOpacity, ActivityIndicator } from "react-native";
+import React from 'react';
+import {
+  ActivityIndicator,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 
 /**
  * Functional component CustomButton
  * @param props
  * Description: returns a custom button
  */
-export const CustomButton = React.memo(function CustomButton (props: any) {
+export const CustomButton = React.memo(function CustomButton(props: any) {
   return (
     <TouchableOpacity style={props.style} onPress={props.onPress}>
       {props.isLoading ? (
         <ActivityIndicator
           animating={props.isLoading}
-          color="blue"
-          size="small"
-          style={{ paddingTop: 8, paddingBottom: 8 }}
+          color='blue'
+          size='small'
+          style={styles.activityIndicator}
         />
       ) : (
         <Text style={props.buttonTextStyle}>{props.title} </Text>
@@ -25,4 +30,11 @@ export const CustomButton = React.memo(function CustomButton (props: any) {
     </TouchableOpacity>
   );
 }); // End of functional component
+
+const styles = StyleSheet.create({
+  activityIndicator: {
+    paddingTop: 8,
+    paddingBottom: 8
+  }
+});
 // End of file

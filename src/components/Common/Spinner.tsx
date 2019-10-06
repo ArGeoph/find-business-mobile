@@ -1,6 +1,6 @@
-import { ActivityIndicator } from "react-native";
-import { styles } from "../../theme/styles";
-import React from "react";
+import { ActivityIndicator } from 'react-native';
+import { styles } from '../../theme/styles';
+import React from 'react';
 
 /**
  * Functional component
@@ -11,8 +11,8 @@ export const Spinner = (props: any) => {
   return (
     <ActivityIndicator
       animating={props.isLoading}
-      color="blue"
-      size="large"
+      color='blue'
+      size='large'
       style={styles.spinner}
     />
   );

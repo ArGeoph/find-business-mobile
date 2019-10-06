@@ -1,18 +1,18 @@
-import fetchBusinesses from "../../api/fetchBusinesses";
+import fetchBusinesses from '../../api/fetchBusinesses';
 import {
   fetchBegin,
   successfulResponse,
   unsuccessfulResponse,
-} from "./actions";
+} from './actions';
 
 /**
- *
- * @param String term, String location, String sortBy
+ * Description: fetches data from Yelp api and dispatches corresponding Redux actions
+ * @param {string} term
+ * @param {string} location
+ * @param {string} sortBy
  * @return on success: dispatches the corresponding Redux action by calling successfulResponse
  *          on failure: dispatches the corresponding Redux action by calling unsuccessfulResponse
- * Description: fetches data from Yelp api and dispatches corresponding Redux actions
  */
-
 export const searchBusinesses = (
   term: string,
   location: string,
@@ -31,7 +31,7 @@ export const searchBusinesses = (
       })
       .catch(error => {
         // Catch error if any and set state errorMessage to the error message
-        console.log("searchBusinesses::searchYelp [catch block]");
+        console.log('searchBusinesses::searchYelp [catch block]');
         console.log(error);
         dispatch(unsuccessfulResponse(error.message));
       });

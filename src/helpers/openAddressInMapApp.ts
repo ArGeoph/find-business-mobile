@@ -1,14 +1,14 @@
 /**
  * Imports
  */
-import { Linking, Platform } from "react-native";
+import { Linking, Platform } from 'react-native';
 
 // Open business's address in the external app
 export const openAddressInMapApp = (address: string) => {
   let addressWithPrefix: string;
 
   // Prepare the address query based on the platform
-  if (Platform.OS === "android") {
+  if (Platform.OS === 'android') {
     addressWithPrefix = `geo:0,0?q=${address}`;
   } else {
     addressWithPrefix = `maps:0,0?q=${address}`;
@@ -20,7 +20,7 @@ export const openAddressInMapApp = (address: string) => {
       if (isSupported) {
         Linking.openURL(addressWithPrefix);
       } else {
-        console.log("Call to maps application are not supported");
+        console.log('Call to maps application are not supported');
       }
     })
     .catch(error => {

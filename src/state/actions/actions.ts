@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import { setLocale } from "../../helpers/localization";
+import { setLocale } from '../../helpers/localization';
 import {
   SEARCH_BUTTON_CLICKED,
   SORT_BY_CLICKED,
@@ -9,7 +9,7 @@ import {
   FETCH_BUSINESSES_SUCCESS,
   FETCH_BUSINESSES_FAILURE,
   SET_APP_LOCALE
-} from "./actionTypes";
+} from './actionTypes';
 
 // Action Creators
 export const searchButtonClicked = () => {

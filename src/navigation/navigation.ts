@@ -1,11 +1,11 @@
 /**
  * Imports
  */
-import HomeScreen from "../screens/HomeScreen";
-import { BusinessWebView } from "../screens/BusinessWebView";
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
-import { PageNotFound } from "../screens/PageNotFound";
+import HomeScreen from '../screens/HomeScreen';
+import { BusinessWebView } from '../screens/BusinessWebView';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { PageNotFound } from '../screens/PageNotFound';
 
 // Step 1. Create React Native routes
 const RootStack = createStackNavigator(
@@ -24,7 +24,7 @@ const RootStack = createStackNavigator(
     },
   },
   {
-    initialRouteName: "Home"
+    initialRouteName: 'Home'
   }
 );
 
