@@ -18,7 +18,7 @@ import { styles } from '../../theme/styles';
 import { Sizes } from '../../theme/GlobalStyles';
 
 // Import helpers
-import { strings } from '../../helpers/localization';
+import { getLocalizedStringFor } from '../../helpers/localization';
 import { openAddressInMapApp } from '../../helpers/openAddressInMapApp';
 import { makePhoneCall } from '../../helpers/makePhoneCall';
 import { Business } from "../../api/model/Business";
@@ -88,7 +88,7 @@ const SearchResults = React.memo(function(props: any) {
                 <Button
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
-                  title={strings('open')}
+                  title={getLocalizedStringFor('open')}
                   icon={
                     <Icon
                       name='map-marked-alt'
@@ -109,7 +109,7 @@ const SearchResults = React.memo(function(props: any) {
                 <Button
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
-                  title={strings('call')}
+                  title={getLocalizedStringFor('call')}
                   icon={
                     <Icon name='phone' size={Sizes.iconSize} color='white' />
                   }
@@ -122,7 +122,7 @@ const SearchResults = React.memo(function(props: any) {
                 <Button
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
-                  title={strings('rating')}
+                  title={getLocalizedStringFor('rating')}
                   icon={
                     <Icon name='smile' size={Sizes.iconSize} color='white' />
                   }
@@ -141,7 +141,7 @@ const SearchResults = React.memo(function(props: any) {
                 <Button
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
-                  title={strings('reviews')}
+                  title={getLocalizedStringFor('reviews')}
                   icon={
                     <Icon
                       name='sort-numeric-up'
@@ -157,7 +157,7 @@ const SearchResults = React.memo(function(props: any) {
                 <Button
                   titleStyle={styles.businessButtonText}
                   buttonStyle={styles.businessButton}
-                  title={strings('price')}
+                  title={getLocalizedStringFor('price')}
                   icon={
                     <Icon
                       name='dollar-sign'

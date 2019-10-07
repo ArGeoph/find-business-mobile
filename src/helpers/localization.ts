@@ -38,7 +38,7 @@ export const isRTL =
 ReactNative.I18nManager.allowRTL(isRTL);
 
 // The method we'll use instead of a regular string
-export function strings(name: string, params = {}) {
+export function getLocalizedStringFor(name: string, params = {}) {
   return I18n.t(name, params);
 }
 

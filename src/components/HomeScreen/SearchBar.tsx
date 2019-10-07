@@ -6,7 +6,6 @@ import {
   ImageBackground,
   TextInput,
   View,
-  Picker,
   SafeAreaView,
 } from 'react-native';
 import { CustomButton } from '../Common/CustomButton';
@@ -19,7 +18,7 @@ import { Colors, Sizes } from '../../theme/GlobalStyles';
 
 // Import helpers
 import { getCoordinatesFromDeviceGPS } from '../../helpers/getCoordinatesFromDeviceGPS';
-import { strings } from '../../helpers/localization';
+import { getLocalizedStringFor } from '../../helpers/localization';
 
 /**
  * Functional component
@@ -30,6 +29,7 @@ const SearchBar = React.memo(function SearchBar(props: any) {
   console.log('SearchBar::Render');
 
   const {
+    locale,
     onLocaleChange,
     onResultsRefresh,
     onSearchButtonClicked,
@@ -37,7 +37,7 @@ const SearchBar = React.memo(function SearchBar(props: any) {
     sortBy,
     isLoading,
     isSearchButtonClicked,
-    locale
+    navigation
   } = props;
 
   // React Hooks
@@ -60,7 +60,7 @@ const SearchBar = React.memo(function SearchBar(props: any) {
           }
         }}
         isLoading={false}
-        title={strings(buttonLabel)}
+        title={getLocalizedStringFor(buttonLabel)}
         buttonTextStyle={styles.searchBarButtonTextStyle}
         style={
           sortBy === buttonLabel ? styles.activeSortButton : styles.sortButton
@@ -78,52 +78,38 @@ const SearchBar = React.memo(function SearchBar(props: any) {
       <SafeAreaView />
       <View style={styles.topHeaderContainer}>
         <View>
+          {/*Settings screen button*/}
           <Button
             buttonStyle={styles.topHeaderMenuButton}
-            icon={<Icon name='tools' size={Sizes.iconSize} color='white' />}
+            icon={<Icon name='tools' size={Sizes.iconSize} color={Colors.white} />}
+            onPress={() => navigation.navigate('SettingsScreen', {'onLocaleChange': onLocaleChange, 'locale': locale})}
             iconRight
           />
+          {/*Favourite screen button*/}
           <Button
             buttonStyle={styles.topHeaderMenuButton}
-            icon={<Icon name='star' size={Sizes.iconSize} color='white' />}
+            icon={<Icon name='star' size={Sizes.iconSize} color={Colors.white} />}
             iconRight
           />
-        </View>
-
-        {/* Language dropdown list */}
-        <View>
-          <Picker
-            mode='dropdown'
-            selectedValue={locale}
-            style={styles.picker}
-            onValueChange={itemValue => onLocaleChange(itemValue)}
-          >
-            <Picker.Item label='EN' value='en' />
-            <Picker.Item label='FR' value='fr' />
-            <Picker.Item label='ES' value='es' />
-            <Picker.Item label='DE' value='de' />
-            <Picker.Item label='RU' value='ru' />
-            <Picker.Item label='HI' value='hi' />
-            <Picker.Item label='JA' value='ja' />
-            <Picker.Item label='ZH' value='zh' />
-          </Picker>
         </View>
       </View>
 
       {/* Input fields */}
       <View style={styles.inputFieldsContainer}>
+        {/*Search request field*/}
         <TextInput
           style={styles.inputField}
-          placeholder={strings('search_request')}
-          onChangeText={event => setTerm(event)}
+          placeholder={getLocalizedStringFor('search_request')}
+          onChangeText={setTerm}
           value={localTerm}
         />
 
+        {/*Address field*/}
         <View style={styles.addressInputFieldContainer}>
           <TextInput
             style={styles.addressInputField}
-            placeholder={strings('address')}
-            onChangeText={event => setLocation(event)}
+            placeholder={getLocalizedStringFor('address')}
+            onChangeText={setLocation}
             value={localLocation}
           />
           <Button
@@ -140,7 +126,7 @@ const SearchBar = React.memo(function SearchBar(props: any) {
             onSearchButtonClicked(localTerm, localLocation, sortBy);
           }}
           isLoading={isLoading && isSearchButtonClicked}
-          title={strings('search')}
+          title={getLocalizedStringFor('search')}
           style={styles.searchButton}
           buttonTextStyle={styles.searchBarButtonTextStyle}
         />
