@@ -2,12 +2,11 @@
  * Imports
  */
 import { StyleSheet } from 'react-native';
-import { height, width, Sizes} from "./GlobalStyles";
+import { height, Colors, Sizes, width } from './GlobalStyles';
 
 // Styles ==========================================================================================================
 export const styles = StyleSheet.create({
   searchBar: {
-    alignItems: 'center',
     height: 0.25 * height
   },
   topHeaderContainer: {
@@ -21,17 +20,12 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     borderRadius: 0,
-    backgroundColor: 'orange'
+    backgroundColor: Colors.orange
   },
   picker: {
     height: 35,
     width: 85,
-    backgroundColor: 'white'
-  },
-  pickerItem: {
-    textAlign: 'left',
-    height: 40,
-    width: 85
+    backgroundColor: Colors.white
   },
   inputFieldsContainer: {
     flex: 1,
@@ -42,13 +36,11 @@ export const styles = StyleSheet.create({
     height: 38,
     width: 280,
     borderRadius: 5,
-    borderColor: 'black',
+    borderColor: Colors.black,
     borderWidth: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     marginBottom: 10,
     paddingLeft: 10,
-    alignItems: 'center',
-    justifyContent: 'center'
   },
   addressInputFieldContainer: {
     flex: 1,
@@ -59,12 +51,10 @@ export const styles = StyleSheet.create({
     height: 37,
     width: 240,
     borderRadius: 5,
-    borderColor: 'black',
+    borderColor: Colors.black,
     borderWidth: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     paddingLeft: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
     borderRightWidth: 0,
     borderBottomRightRadius: 0,
     borderTopRightRadius: 0
@@ -73,43 +63,41 @@ export const styles = StyleSheet.create({
     width: 200,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#009dff',
+    backgroundColor: Colors.light_blue,
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: Colors.black,
     marginBottom: 25
   },
   searchBarButtonTextStyle: {
     paddingTop: 9,
     paddingBottom: 9,
-    color: 'white',
+    color: Colors.white,
     fontSize: Sizes.buttonFontSize,
-    fontWeight: 'bold',
-    textAlign: 'center'
+    fontWeight: 'bold'
   },
   sortButtonsContainer: {
     flexDirection: 'row',
-    justifyContent: 'center'
   },
   sortButton: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#009dff',
+    backgroundColor: Colors.light_blue,
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: Colors.black,
     borderRadius: 3
   },
   activeSortButton: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f779ee',
+    backgroundColor: Colors.pink,
     borderWidth: 1,
-    borderColor: 'black'
+    borderColor: Colors.black
   },
   businessesList: {
-    borderColor: 'black',
+    borderColor: Colors.black,
     borderWidth: 1,
     borderRadius: 5,
     paddingTop: 10,
@@ -128,40 +116,34 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   imageContainer: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: 250,
-    marginTop: 10,
-    marginBottom: 10
+    height: 0.23 * height,
+    marginVertical: 10,
   },
   businessImage: {
     flex: 1,
     width: '95%',
-    resizeMode: 'cover',
-    justifyContent: 'center',
-    alignItems: 'center',
     borderRadius: 10,
-    borderWidth: 1
+    borderWidth: 1,
   },
   businessButton: {
     width: 100,
     height: 35,
     borderWidth: 1,
-    borderColor: 'black',
+    borderColor: Colors.black,
     borderRadius: 3,
-    backgroundColor: 'orange'
+    backgroundColor: Colors.orange,
   },
   businessButtonContainer: {
     flexDirection: 'row',
     marginLeft: 7,
-    marginTop: 5
+    marginTop: 5,
   },
   businessButtonText: {
     fontSize: Sizes.businessContentButtonFontSize,
     paddingRight: 2,
-    color: 'white'
+    color: Colors.white,
   },
   spinner: {
     top: 0.3 * height
@@ -170,15 +152,15 @@ export const styles = StyleSheet.create({
     width: 40,
     height: 37,
     borderRadius: 5,
-    borderColor: 'black',
+    borderColor: Colors.black,
     borderWidth: 1,
     borderLeftWidth: 0,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
     borderBottomLeftRadius: 0,
-    borderTopLeftRadius: 0
+    borderTopLeftRadius: 0,
   },
   errorMessage: {
-    color: 'red',
+    color: Colors.red,
     padding: 20,
     fontSize: Sizes.errorMessageFontSize,
     textAlign: 'center'

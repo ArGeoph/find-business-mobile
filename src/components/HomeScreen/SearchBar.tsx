@@ -94,7 +94,6 @@ const SearchBar = React.memo(function SearchBar(props: any) {
         <View>
           <Picker
             mode='dropdown'
-            itemStyle={styles.pickerItem}
             selectedValue={locale}
             style={styles.picker}
             onValueChange={itemValue => onLocaleChange(itemValue)}

@@ -4,7 +4,7 @@ import { Dimensions } from "react-native";
 export const Sizes = {
   iconSize: 17,
   buttonFontSize: 14,
-  errorMessageFontSize: 20,
+  errorMessageFontSize: 24,
   businessContentButtonFontSize: 13,
   businessHeaderFontSize: 26,
   businessContentFontSize: 16
@@ -12,10 +12,14 @@ export const Sizes = {
 
 // Color's codes used all across the application
 export const Colors = {
+  white: '#FFFFFF',
   black: '#000000',
   pink: '#f779ee',
-  light_blue: '#009dff'
+  light_blue: '#009dff',
+  orange: '#ffa100',
+  red: '#fc0000'
 };
 
 // Get the device screen's width and height
 export const { height, width } = Dimensions.get('screen');
+// End of file

@@ -46,3 +46,4 @@ export function strings(name: string, params = {}) {
 export function setLocale(locale: string) {
   I18n.locale = locale;
 }
+// End of file

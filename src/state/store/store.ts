@@ -19,3 +19,4 @@ export const store = createStore(
   initialState,
   applyMiddleware(thunk)
 );
+// End of file

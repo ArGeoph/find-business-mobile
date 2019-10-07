@@ -21,6 +21,7 @@ import { Sizes } from '../../theme/GlobalStyles';
 import { strings } from '../../helpers/localization';
 import { openAddressInMapApp } from '../../helpers/openAddressInMapApp';
 import { makePhoneCall } from '../../helpers/makePhoneCall';
+import { Business } from "../../api/model/Business";
 
 /**
  * Functional component: Search Results
@@ -38,8 +39,10 @@ const SearchResults = React.memo(function(props: any) {
     navigation
   } = props;
 
+  // Check if there's anything to render
   if (businesses.length !== 0) {
     console.log('SearchResults::Render');
+
     return (
       <FlatList
         refreshControl={
@@ -50,7 +53,7 @@ const SearchResults = React.memo(function(props: any) {
             refreshing={isLoading}
           />
         }
-        data={businesses.map((business: any) => {
+        data={businesses.map((business: Business) => {
           return {
             id: business.id,
             title: business.name,
@@ -167,10 +170,10 @@ const SearchResults = React.memo(function(props: any) {
                 <Text style={styles.businessContent}>{item.priceRange}</Text>
               </View>
               <View style={styles.imageContainer}>
-                <Image
+                  <Image
                   style={styles.businessImage}
                   source={{ uri: item.image }}
-                />
+                  />
               </View>
             </TouchableOpacity>
           );

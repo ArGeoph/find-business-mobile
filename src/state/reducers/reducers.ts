@@ -48,6 +48,7 @@ const rootReducer = (state: any, action: any) => {
 
     case FETCH_BUSINESSES_FAILURE:
       console.log(action);
+
       return {
         ...state,
         errorMessage: action.errorMessage,
@@ -64,6 +65,7 @@ const rootReducer = (state: any, action: any) => {
         sortBy: action.sortBy
       };
 
+      // Return the state if the action isn't correct
     default:
       return state;
   }
