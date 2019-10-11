@@ -89,6 +89,7 @@ const SearchBar = React.memo(function SearchBar(props: any) {
           <Button
             buttonStyle={styles.topHeaderMenuButton}
             icon={<Icon name='star' size={Sizes.iconSize} color={Colors.white} />}
+            onPress={() => navigation.navigate('FavoriteBusinessesScreen')}
             iconRight
           />
         </View>

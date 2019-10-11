@@ -7,6 +7,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { PageNotFound } from '../screens/PageNotFound';
 import { Settings } from "../screens/Settings";
+import {FavoriteBusinesses} from "../screens/FavoriteBusinesses";
 
 // Step 1. Create React Native routes
 const RootStack = createStackNavigator(
@@ -24,7 +25,16 @@ const RootStack = createStackNavigator(
         screen: PageNotFound
     },
     SettingsScreen: {
-        screen: Settings
+        screen: Settings,
+        navigationOptions: {
+            title: 'Settings',
+        }
+    },
+    FavoriteBusinessesScreen: {
+      screen: FavoriteBusinesses,
+      navigationOptions: {
+          title: 'Favorites',
+      }
     },
   },
   {
