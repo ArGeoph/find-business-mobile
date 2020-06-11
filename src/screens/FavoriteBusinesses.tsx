@@ -2,8 +2,8 @@
  * Imports
  */
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {Sizes} from '../theme/GlobalStyles';
+import { StyleSheet, Text, View } from 'react-native';
+import { Sizes } from '../theme/GlobalStyles';
 /**
  * Functional Component: FavoriteBusinesses
  * Description: contains the list of businesses saved by the user
