@@ -6,8 +6,8 @@ import { BusinessWebView } from '../screens/BusinessWebView';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { PageNotFound } from '../screens/PageNotFound';
-import { Settings } from "../screens/Settings";
-import {FavoriteBusinesses} from "../screens/FavoriteBusinesses";
+import { Settings } from '../screens/Settings';
+import { FavoriteBusinesses } from '../screens/FavoriteBusinesses';
 
 // Step 1. Create React Native routes
 const RootStack = createStackNavigator(
@@ -15,14 +15,14 @@ const RootStack = createStackNavigator(
     Home: {
         screen: HomeScreen,
         navigationOptions: {
-            header: null
+            headerShown: false,
         }
     },
     BusinessWebsiteScreen: {
-        screen: BusinessWebView
+        screen: BusinessWebView,
     },
     ErrorScreen: {
-        screen: PageNotFound
+        screen: PageNotFound,
     },
     SettingsScreen: {
         screen: Settings,
