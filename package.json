@@ -5,16 +5,21 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clean": "rm -rf node_modules && npm i && npm cache clean && rm -rf /tmp/metro-*"
   },
   "dependencies": {
     "@react-native-community/geolocation": "2.0.2",
+    "@react-native-community/masked-view": "^0.1.10",
     "react": "16.9.0",
     "react-native": "0.61.1",
     "react-native-elements": "1.2.3",
     "react-native-geolocation-service": "^3.0.0",
-    "react-native-gesture-handler": "1.4.1",
+    "react-native-gesture-handler": "^1.4.1",
     "react-native-i18n": "2.0.15",
+    "react-native-reanimated": "^1.9.0",
+    "react-native-safe-area-context": "^3.0.3",
+    "react-native-screens": "^2.8.0",
     "react-native-vector-icons": "6.6.0",
     "react-native-webview": "7.2.5",
     "react-navigation": "4.0.10",
