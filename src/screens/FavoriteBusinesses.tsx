@@ -15,7 +15,7 @@ export const FavoriteBusinesses = (props: any) => {
 
   return (
     <View>
-       <Text style={styles.listEmptyMessage}>You haven't added anything to your favorites!</Text>
+       <Text style={styles.listEmptyMessage}>You haven't added anything to your favorites yet!</Text>
     </View>
   );
 };// End of Functional Component
