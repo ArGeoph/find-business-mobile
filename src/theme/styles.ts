@@ -7,15 +7,15 @@ import { height, Colors, Sizes, width } from './GlobalStyles';
 // Styles ==========================================================================================================
 export const styles = StyleSheet.create({
   searchBar: {
-    height: 0.25 * height
+    height: 0.3 * height,
   },
   topHeaderContainer: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
+    flexDirection: "row",
+    justifyContent: 'space-between',
+    flexWrap: 'nowrap',
   },
   topHeaderMenuButton: {
-    width: 50,
+    width: 48,
     height: 35,
     borderWidth: 1,
     borderColor: 'black',
@@ -30,11 +30,11 @@ export const styles = StyleSheet.create({
   inputFieldsContainer: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    marginTop: '3%',
   },
   inputField: {
     height: 38,
-    width: 280,
+    width: '75%',
     borderRadius: 5,
     borderColor: Colors.black,
     borderWidth: 1,
@@ -45,11 +45,11 @@ export const styles = StyleSheet.create({
   addressInputFieldContainer: {
     flex: 1,
     flexDirection: 'row',
-    height: 37
+    height: 37,
   },
   addressInputField: {
     height: 37,
-    width: 240,
+    width: '64%',
     borderRadius: 5,
     borderColor: Colors.black,
     borderWidth: 1,
@@ -57,36 +57,36 @@ export const styles = StyleSheet.create({
     paddingLeft: 10,
     borderRightWidth: 0,
     borderBottomRightRadius: 0,
-    borderTopRightRadius: 0
+    borderTopRightRadius: 0,
   },
   searchButton: {
     width: 200,
+    height: 37,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.light_blue,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: Colors.black,
-    marginBottom: 25
+    marginBottom: 5,
   },
   searchBarButtonTextStyle: {
-    paddingTop: 9,
-    paddingBottom: 9,
     color: Colors.white,
     fontSize: Sizes.buttonFontSize,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   sortButtonsContainer: {
     flexDirection: 'row',
   },
   sortButton: {
     flex: 1,
+    height: 37,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.light_blue,
     borderWidth: 1,
     borderColor: Colors.black,
-    borderRadius: 3
+
   },
   activeSortButton: {
     flex: 1,

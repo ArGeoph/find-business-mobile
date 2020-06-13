@@ -77,7 +77,6 @@ const SearchBar = React.memo(function SearchBar(props: any) {
     >
       <SafeAreaView />
       <View style={styles.topHeaderContainer}>
-        <View>
           {/*Settings screen button*/}
           <Button
             buttonStyle={styles.topHeaderMenuButton}
@@ -92,7 +91,6 @@ const SearchBar = React.memo(function SearchBar(props: any) {
             onPress={() => navigation.navigate('FavoriteBusinessesScreen')}
             iconRight
           />
-        </View>
       </View>
 
       {/* Input fields */}
