@@ -16,6 +16,7 @@ export const Colors = {
   black: '#000000',
   pink: '#f779fe',
   light_blue: '#009dff',
+  darker_blue: '#6280ea',
   orange: '#ffa100',
   red: '#fc0000',
 };
