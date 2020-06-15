@@ -71,6 +71,7 @@ export const styles = StyleSheet.create({
     marginBottom: 5,
   },
   searchBarButtonTextStyle: {
+    textAlign: 'center',
     color: Colors.white,
     fontSize: Sizes.buttonFontSize,
     fontWeight: 'bold',
@@ -92,7 +93,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: Colors.pink,
+    backgroundColor: Colors.darker_blue,
     borderWidth: 1,
     borderColor: Colors.black
   },

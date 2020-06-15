@@ -25,7 +25,7 @@ export const CustomButton = React.memo(function CustomButton(props: any) {
           style={styles.activityIndicator}
         />
       ) : (
-        <Text style={props.buttonTextStyle}>{props.title} </Text>
+        <Text style={props.buttonTextStyle}>{props.title}</Text>
       )}
     </TouchableOpacity>
   );
