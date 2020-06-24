@@ -12,21 +12,18 @@ import {
 const rootReducer = (state: any, action: any) => {
   switch (action.type) {
     case SEARCH_BUTTON_CLICKED:
-      console.log(action);
       return {
         ...state,
         isSearchButtonClicked: action.isSearchButtonClicked
       };
 
     case SET_APP_LOCALE:
-      console.log(action);
       return {
         ...state,
         locale: action.locale
       };
 
     case FETCH_BUSINESSES_BEGIN:
-      console.log(action);
       return {
         ...state,
         term: action.term,
@@ -37,7 +34,6 @@ const rootReducer = (state: any, action: any) => {
       };
 
     case FETCH_BUSINESSES_SUCCESS:
-      console.log(action);
       return {
         ...state,
         errorMessage: '',
@@ -47,8 +43,6 @@ const rootReducer = (state: any, action: any) => {
       };
 
     case FETCH_BUSINESSES_FAILURE:
-      console.log(action);
-
       return {
         ...state,
         errorMessage: action.errorMessage,
@@ -58,14 +52,12 @@ const rootReducer = (state: any, action: any) => {
       };
 
     case SORT_BY_CLICKED:
-      console.log(action);
-
       return {
         ...state,
         sortBy: action.sortBy
       };
 
-      // Return the state if the action isn't correct
+    // Return the state if there's no matching action type was found
     default:
       return state;
   }

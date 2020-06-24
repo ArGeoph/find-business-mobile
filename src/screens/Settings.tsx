@@ -3,16 +3,16 @@
  */
 import React from 'react';
 import { View, Text } from 'react-native';
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from 'react-redux';
 import { Picker } from '@react-native-community/picker';
 import { styles } from '../theme/styles';
-import { setAppLocale } from "../state/actions/actions";
+import { setAppLocale } from '../state/actions/actions';
 
 /**
  * Functional Component: PageNotFound
  * Description: renders a warning when a business doesn't have a url
  */
-export const Settings = (props: any) => {
+const Settings = (props: any) => {
   console.log('SettingsScreen::Render');
 
   const { locale } = useSelector((state: any) => state);
@@ -42,4 +42,6 @@ export const Settings = (props: any) => {
     </View>
   );
 };// End of Functional Component
+
+export default Settings;
 // End of file
