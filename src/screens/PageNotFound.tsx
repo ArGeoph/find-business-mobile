@@ -9,7 +9,7 @@ import { styles } from '../theme/styles';
  * Functional Component: PageNotFound
  * Description: renders a warning when a business doesn't have a url
  */
-export const PageNotFound = () => {
+const PageNotFound = () => {
   console.log('PageNotFound::Render');
   return (
     <View>
@@ -19,4 +19,6 @@ export const PageNotFound = () => {
     </View>
   );
 }; // End of Functional Component
+
+export default PageNotFound;
 // End of file

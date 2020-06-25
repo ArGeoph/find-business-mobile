@@ -1,4 +1,4 @@
-import { Dimensions } from "react-native";
+import { Dimensions } from 'react-native';
 
 // Sizes of different objects used across the application
 export const Sizes = {

@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     height: 0.3 * height,
   },
   topHeaderContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     justifyContent: 'space-between',
     flexWrap: 'nowrap',
   },
@@ -168,7 +168,17 @@ export const styles = StyleSheet.create({
   },
   ratingContainer: {
     marginLeft: 5,
-    marginTop: 10
+    marginTop: 10,
+  },
+  settingRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+  },
+  settingRowText: {
+    fontSize: Sizes.businessContentFontSize,
+    fontWeight: 'bold',
   }
 }); // Styles end ==========================================================================================================
 // End of file

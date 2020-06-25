@@ -21,7 +21,7 @@ import { Sizes } from '../../theme/GlobalStyles';
 import { getLocalizedStringFor } from '../../helpers/localization';
 import { openAddressInMapApp } from '../../helpers/openAddressInMapApp';
 import { makePhoneCall } from '../../helpers/makePhoneCall';
-import { Business } from "../../api/model/Business";
+import { Business } from '../../api/model/Business';
 
 /**
  * Functional component: Search Results

@@ -8,10 +8,8 @@ import { Sizes } from '../theme/GlobalStyles';
  * Functional Component: FavoriteBusinesses
  * Description: contains the list of businesses saved by the user
  */
-export const FavoriteBusinesses = (props: any) => {
+const FavoriteBusinesses = (props: any) => {
   console.log('FavouritesScreen::Render');
-
-  // Get all required data from props
 
   return (
     <View>
@@ -27,4 +25,6 @@ const styles = StyleSheet.create({
         fontSize: Sizes.errorMessageFontSize
     },
 });// End of styles object
+
+export default FavoriteBusinesses;
 // End of file
