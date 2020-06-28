@@ -7,36 +7,44 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Picker } from '@react-native-community/picker';
 import { styles } from '../theme/styles';
 import { setAppLocale } from '../state/actions/actions';
+import { getListOfAvailableLocales } from '../helpers/localization';
 
 /**
- * Functional Component: PageNotFound
- * Description: renders a warning when a business doesn't have a url
+ * Settings screen
+ * Description: renders the Settings screen
  */
-const Settings = (props: any) => {
+const Settings = () => {
   console.log('SettingsScreen::Render');
 
   const { locale } = useSelector((state: any) => state);
   const dispatch = useDispatch();
-  const onLanguageChange = (selectedLocale: any) => dispatch(setAppLocale(selectedLocale));
+  const onLanguageChange = (selectedLocale: string) => dispatch(setAppLocale(selectedLocale));
+
+  const listOfAvailableLocales = getListOfAvailableLocales();
+  const listOfCuisines = ['none', 'sushi', 'chinese', 'bbq', 'italian'];
 
   return (
     <View>
         <View style={styles.settingRow}>
-        <Text style={styles.settingRowText}>Select UI language</Text>
+            <Text style={styles.settingRowText}>Select UI language</Text>
             <Picker
                 mode='dropdown'
                 selectedValue={locale}
-                onValueChange={selectedLocale => onLanguageChange(selectedLocale)}
+                onValueChange={(selectedLocale: string) => onLanguageChange(selectedLocale)}
                 style={styles.picker}
             >
-                <Picker.Item label='EN' value='en' />
-                <Picker.Item label='FR' value='fr' />
-                <Picker.Item label='ES' value='es' />
-                <Picker.Item label='DE' value='de' />
-                <Picker.Item label='RU' value='ru' />
-                <Picker.Item label='HI' value='hi' />
-                <Picker.Item label='JA' value='ja' />
-                <Picker.Item label='ZH' value='zh' />
+                {listOfAvailableLocales.map((locale: string) => <Picker.Item label={locale.toUpperCase()} value={locale} />)}
+            </Picker>
+        </View>
+
+        <View style={styles.settingRow}>
+            <Text style={styles.settingRowText}>Select favourite cuisine</Text>
+            <Picker
+                mode='dropdown'
+                selectedValue={listOfCuisines[0]}
+                style={styles.picker}
+            >
+                {listOfCuisines.map(cuisine => <Picker.Item label={cuisine.toLocaleUpperCase()} value={cuisine} />)}
             </Picker>
         </View>
     </View>
