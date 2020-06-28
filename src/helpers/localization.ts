@@ -14,6 +14,9 @@ import zh from '../locales/zh.json';
 // Should the app fallback to English if user locale doesn't exists
 I18n.fallbacks = true;
 
+// List of available locales
+const listOfLocales =  ['en', 'fr', 'es', 'de', 'ru', 'hi', 'ja', 'zh'];
+
 // Define the supported translations
 I18n.translations = {
   en,
@@ -28,7 +31,6 @@ I18n.translations = {
 
 const currentLocale = I18n.currentLocale();
 I18n.locale = 'en';
-console.log(currentLocale);
 
 // Is it a RTL language?
 export const isRTL =
@@ -40,6 +42,11 @@ ReactNative.I18nManager.allowRTL(isRTL);
 // The method we'll use instead of a regular string
 export function getLocalizedStringFor(name: string, params = {}) {
   return I18n.t(name, params);
+}
+
+// The method returns the list of available locales
+export function getListOfAvailableLocales() {
+  return listOfLocales;
 }
 
 // The method we'll use instead of a regular string
