@@ -36,8 +36,7 @@ const fetchBusinesses = (term: string, location: string, sortBy: string) => {
     headers: {
       Authorization: `Bearer ${apiKey}`
     }
-  })
-    .then(response => {
+  }).then(response => {
       // Step 2.1. Check if object can be parsed as a Json object
       try {
         return response.json();
@@ -45,8 +44,7 @@ const fetchBusinesses = (term: string, location: string, sortBy: string) => {
         // Step 2.2. If it cannot be parsed, return a rejected promise with the reason
         return Promise.reject(new Error(getLocalizedStringFor('wrong_api_message')));
       }
-    })
-    .then(parsedResponse => {
+    }).then(parsedResponse => {
       // Step 3.1 Iterate through returned object and include data that we need and return a new array
       console.log(parsedResponse);
 

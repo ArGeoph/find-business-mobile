@@ -14,10 +14,10 @@ class BusinessWebView extends React.Component {
   render() {
     // Step 1. Get navigation and url from props
     const { navigation }: any = this.props;
-    const url: string = navigation.getParam('uri');
+    const uri: string = navigation.getParam('uri');
 
     // Step 2. Render url in web view component
-    return <WebView source={{ uri: url }} startInLoadingState={true} />;
+    return <WebView source={{ uri }} startInLoadingState={true} />;
   }
 } // End of class
 
