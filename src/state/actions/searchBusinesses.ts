@@ -18,8 +18,6 @@ export const searchBusinesses = (
   location: string,
   sortBy: string
 ) => {
-  console.log(term, location, sortBy);
-
   return (dispatch: any) => {
     dispatch(fetchBegin(term, location, sortBy));
 
@@ -32,7 +30,6 @@ export const searchBusinesses = (
       .catch(error => {
         // Catch error if any and set state errorMessage to the error message
         console.log('searchBusinesses::searchYelp [catch block]');
-        console.log(error);
         dispatch(unsuccessfulResponse(error.message));
       });
   };

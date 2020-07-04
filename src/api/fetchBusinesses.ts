@@ -38,10 +38,6 @@ const fetchBusinesses = (term: string, location: string, sortBy: string) => {
     }
   })
     .then(response => {
-      // Step 2. If response is successful convert response to a json object
-      console.log(`Yelp::Response: ${response}`);
-      console.log(response);
-
       // Step 2.1. Check if object can be parsed as a Json object
       try {
         return response.json();
@@ -83,9 +79,8 @@ const fetchBusinesses = (term: string, location: string, sortBy: string) => {
             or network problems, throw corresponding error */
         return Promise.reject(
           new Error(
-            `${getLocalizedStringFor('code')}: ${parsedResponse.error.code}. ${getLocalizedStringFor(
-              'description'
-            )}: ${parsedResponse.error.description}`
+            `${getLocalizedStringFor('code')}: ${parsedResponse.error.code}. 
+              ${getLocalizedStringFor('description')}: ${parsedResponse.error.description}`
           )
         );
       }

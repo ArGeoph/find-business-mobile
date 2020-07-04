@@ -2,10 +2,10 @@
  * Imports
  */
 import {
-  PermissionsAndroid,
   Alert,
-  Platform,
+  PermissionsAndroid,
   PermissionStatus,
+  Platform,
 } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 
@@ -24,20 +24,16 @@ export const getCoordinatesFromDeviceGPS = async (setLocation: any) => {
 
   // Get coordinates
   if (isPermissionGranted === 'granted') {
-    Geolocation.getCurrentPosition(
+    await Geolocation.getCurrentPosition(
       position => {
-        const coordinates = `${position.coords.latitude} ${
-          position.coords.longitude
-        }`;
-        console.log(position);
+        const coordinates = `${position.coords.latitude} ${position.coords.longitude}`;
         setLocation(coordinates);
       },
       error => {
         // See error code charts below.
         Alert.alert(error.message);
-        console.log(error.code, error.message);
       },
-      { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
+        { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
     );
   }
 };
