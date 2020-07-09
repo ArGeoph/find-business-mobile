@@ -41,7 +41,6 @@ class HomeScreen extends React.PureComponent<Props, State> {
   constructor(props: any) {
     super(props);
     console.log('HomeScreen::Constructor');
-    console.log(`HomeScreen::Initial Props[${props}]`);
   }
 
   /**
