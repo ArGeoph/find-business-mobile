@@ -5,9 +5,11 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { Picker } from '@react-native-community/picker';
+
 import { styles } from '../theme/styles';
 import { setAppLocale } from '../state/actions/actions';
 import { getListOfAvailableLocales } from '../helpers/localization';
+import { getLocalizedStringFor } from '../helpers/localization';
 
 /**
  * Settings screen
@@ -21,16 +23,16 @@ const Settings = () => {
   const onLanguageChange = (selectedLocale: string) => dispatch(setAppLocale(selectedLocale));
 
   const listOfAvailableLocales = getListOfAvailableLocales();
-  const listOfCuisines = ['none', 'sushi', 'chinese', 'bbq', 'italian'];
+  const listOfCuisines = ['none', 'sushi', 'chinese', 'sushi', 'bbq', 'italian'];
 
   return (
     <View>
         <View style={styles.settingRow}>
-            <Text style={styles.settingRowText}>Select UI language</Text>
+            <Text style={styles.settingRowText}>{getLocalizedStringFor('select_ui_language')}</Text>
             <Picker
                 mode='dropdown'
                 selectedValue={locale}
-                onValueChange={(selectedLocale: string) => onLanguageChange(selectedLocale)}
+                onValueChange={onLanguageChange}
                 style={styles.picker}
             >
                 {listOfAvailableLocales.map((locale: string) => <Picker.Item label={locale.toUpperCase()} value={locale} />)}
@@ -38,7 +40,7 @@ const Settings = () => {
         </View>
 
         <View style={styles.settingRow}>
-            <Text style={styles.settingRowText}>Select favourite cuisine</Text>
+            <Text style={styles.settingRowText}>{getLocalizedStringFor('select_favorite_cuisine')}</Text>
             <Picker
                 mode='dropdown'
                 selectedValue={listOfCuisines[0]}

@@ -16,5 +16,7 @@
   "search": "Buscar",
   "search_request": "Solicitud de búsqueda",
   "search_returned_nothing": "Su búsqueda no devolvió nada. Por favor revise su entrada!",
-  "wrong_api_message": "¡El objeto devuelto no se puede analizar! ¡Comprueba tu URL de API!"
+  "wrong_api_message": "¡El objeto devuelto no se puede analizar! ¡Comprueba tu URL de API!",
+  "select_ui_language": "Seleccionar idioma",
+  "select_favorite_cuisine": "Seleccione cocina favorita"
 }

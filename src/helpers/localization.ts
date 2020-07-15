@@ -2,14 +2,14 @@ import ReactNative from 'react-native';
 import I18n from 'react-native-i18n';
 
 // Import all locales
-import en from '../locales/en.json';
-import fr from '../locales/fr.json';
-import es from '../locales/es.json';
-import de from '../locales/de.json';
-import ru from '../locales/ru.json';
-import hi from '../locales/hi.json';
-import ja from '../locales/ja.json';
-import zh from '../locales/zh.json';
+import en from '../locales/en';
+import fr from '../locales/fr';
+import es from '../locales/es';
+import de from '../locales/de';
+import ru from '../locales/ru';
+import hi from '../locales/hi';
+import ja from '../locales/ja';
+import zh from '../locales/zh';
 
 // Should the app fallback to English if user locale doesn't exists
 I18n.fallbacks = true;
@@ -18,19 +18,9 @@ I18n.fallbacks = true;
 const listOfLocales =  ['en', 'fr', 'es', 'de', 'ru', 'hi', 'ja', 'zh'];
 
 // Define the supported translations
-I18n.translations = {
-  en,
-  fr,
-  es,
-  de,
-  ru,
-  hi,
-  ja,
-  zh
-};
+I18n.translations = {en, fr, es, de, ru, hi, ja, zh};
 
 const currentLocale = I18n.currentLocale();
-I18n.locale = 'en';
 
 // Is it a RTL language?
 export const isRTL =
@@ -40,17 +30,17 @@ export const isRTL =
 ReactNative.I18nManager.allowRTL(isRTL);
 
 // The method we'll use instead of a regular string
-export function getLocalizedStringFor(name: string, params = {}) {
+export const getLocalizedStringFor = (name: string, params = {}):string => {
   return I18n.t(name, params);
 }
 
-// The method returns the list of available locales
-export function getListOfAvailableLocales() {
+// Method returns the list of available locales
+export const getListOfAvailableLocales = ():string[] => {
   return listOfLocales;
 }
 
 // The method we'll use instead of a regular string
-export function setLocale(locale: string) {
+export const setLocale = (locale: string):void => {
   I18n.locale = locale;
 }
 // End of file

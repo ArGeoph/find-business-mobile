@@ -8,9 +8,11 @@ import {
   View,
   SafeAreaView,
 } from 'react-native';
-import { CustomButton } from '../Common/CustomButton';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { Button } from 'react-native-elements';
+
+import { CustomButton } from '../Common/CustomButton';
+
 
 // Import styles
 import { styles } from '../../theme/styles';

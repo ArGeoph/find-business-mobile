@@ -3,11 +3,12 @@
  */
 import React from 'react';
 import { View } from 'react-native';
+import { connect } from 'react-redux';
+
 import SearchResults from '../components/HomeScreen/SearchResults';
 import { ErrorMessage } from '../components/HomeScreen/ErrorMessage';
 import { Spinner } from '../components/Common/Spinner';
 import SearchBar from '../components/HomeScreen/SearchBar';
-import { connect } from 'react-redux';
 import {
   searchButtonClicked,
   setAppLocale,

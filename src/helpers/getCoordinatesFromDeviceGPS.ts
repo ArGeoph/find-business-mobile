@@ -22,7 +22,7 @@ export const getCoordinatesFromDeviceGPS = async (setLocation: any) => {
     );
   }
 
-  // Get coordinates
+  // If we have all permissions then get device's coordinates
   if (isPermissionGranted === 'granted') {
     await Geolocation.getCurrentPosition(
       position => {
@@ -37,3 +37,4 @@ export const getCoordinatesFromDeviceGPS = async (setLocation: any) => {
     );
   }
 };
+// End of file

@@ -16,5 +16,7 @@
   "search": "Search",
   "search_request": "Search request",
   "search_returned_nothing": "Your search returned nothing. Please check your input!",
-  "wrong_api_message": "Returned object cannot be parsed! Check your api URL!"
+  "wrong_api_message": "Returned object cannot be parsed! Check your api URL!",
+  "select_ui_language": "Select UI language",
+  "select_favorite_cuisine": "Select favorite cuisine"
 }

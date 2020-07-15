@@ -37,7 +37,7 @@ const fetchBusinesses = (term: string, location: string, sortBy: string) => {
       Authorization: `Bearer ${apiKey}`
     }
   }).then(response => {
-      // Step 2.1. Check if object can be parsed as a Json object
+      // Step 2.1. Check if object can be parsed as a JSON object
       try {
         return response.json();
       } catch (error) {
@@ -46,7 +46,6 @@ const fetchBusinesses = (term: string, location: string, sortBy: string) => {
       }
     }).then(parsedResponse => {
       // Step 3.1 Iterate through returned object and include data that we need and return a new array
-      console.log(parsedResponse);
 
       if (parsedResponse.businesses) {
         if (parsedResponse.businesses.length > 0) {
@@ -77,8 +76,7 @@ const fetchBusinesses = (term: string, location: string, sortBy: string) => {
             or network problems, throw corresponding error */
         return Promise.reject(
           new Error(
-            `${getLocalizedStringFor('code')}: ${parsedResponse.error.code}. 
-              ${getLocalizedStringFor('description')}: ${parsedResponse.error.description}`
+            `${getLocalizedStringFor('code')}: ${parsedResponse.error.code}.${getLocalizedStringFor('description')}: ${parsedResponse.error.description}`
           )
         );
       }

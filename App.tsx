@@ -1,10 +1,10 @@
 /**
  * Imports
  */
-import React, { Component } from "react";
-import { Provider } from "react-redux";
-import { store } from "./src/state/store/store";
-import { AppContainer } from "./src/navigation/navigation";
+import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import { store } from './src/state/store/store';
+import { AppContainer } from './src/navigation/navigation';
 
 /**
  * Class: App
