@@ -18,5 +18,6 @@
   "search_returned_nothing": "Ваш поиск не вернул никаких результатов! Пожалуйста проверьте свой ввод!",
   "wrong_api_message": "Возвращенный объект не может быть парсирован! Пожалуйста проверьте предоставленный API!",
   "select_ui_language": "Выберите язык интерфейса",
-  "select_favorite_cuisine": "Выберите любимую кухню"
+  "select_favorite_cuisine": "Выберите любимую кухню",
+  "list_of_cuisines": ["any", "sushi", "chinese", "sushi", "bbq", "italian"]
 }

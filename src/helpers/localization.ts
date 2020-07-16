@@ -11,6 +11,7 @@ import hi from '../locales/hi';
 import ja from '../locales/ja';
 import zh from '../locales/zh';
 
+
 // Should the app fallback to English if user locale doesn't exists
 I18n.fallbacks = true;
 
@@ -30,7 +31,7 @@ export const isRTL =
 ReactNative.I18nManager.allowRTL(isRTL);
 
 // The method we'll use instead of a regular string
-export const getLocalizedStringFor = (name: string, params = {}):string => {
+export const getLocalizedStringFor = (name: string, params = {}) => {
   return I18n.t(name, params);
 }
 

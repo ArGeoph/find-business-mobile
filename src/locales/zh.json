@@ -18,5 +18,6 @@
   "search_returned_nothing": "您的搜索未返回任何内容。请检查您的输入！",
   "wrong_api_message": "返回的对象无法解析！检查您的api地址！",
   "select_ui_language": "选择UI语言",
-  "select_favorite_cuisine": "选择最喜欢的美食"
+  "select_favorite_cuisine": "选择最喜欢的美食",
+  "list_of_cuisines": ["any", "sushi", "chinese", "sushi", "bbq", "italian"]
 }

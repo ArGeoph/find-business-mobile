@@ -18,5 +18,6 @@
   "search_returned_nothing": "検索は何も返しませんでした。入力を確認してください！",
   "wrong_api_message": "返されたオブジェクトは解析できません！ API URLを確認してください！",
   "select_ui_language": "UI言語を選択",
-  "select_favorite_cuisine": "好きな料理"
+  "select_favorite_cuisine": "好きな料理",
+  "list_of_cuisines": ["any", "sushi", "chinese", "sushi", "bbq", "italian"]
 }

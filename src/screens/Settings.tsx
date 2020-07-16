@@ -23,7 +23,7 @@ const Settings = () => {
   const onLanguageChange = (selectedLocale: string) => dispatch(setAppLocale(selectedLocale));
 
   const listOfAvailableLocales = getListOfAvailableLocales();
-  const listOfCuisines = ['none', 'sushi', 'chinese', 'sushi', 'bbq', 'italian'];
+  const listOfCuisines = ['any', 'sushi', 'chinese', 'sushi', 'bbq', 'italian'];
 
   return (
     <View>
@@ -46,7 +46,7 @@ const Settings = () => {
                 selectedValue={listOfCuisines[0]}
                 style={styles.picker}
             >
-                {listOfCuisines.map(cuisine => <Picker.Item label={cuisine.toLocaleUpperCase()} value={cuisine} />)}
+                {getLocalizedStringFor('list_of_cuisines').map((cuisine: string) => <Picker.Item label={cuisine.toLocaleUpperCase()} value={cuisine} />)}
             </Picker>
         </View>
     </View>

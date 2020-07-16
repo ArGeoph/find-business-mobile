@@ -18,5 +18,6 @@
   "search_returned_nothing": "Votre recherche n'a rien donné. S'il vous plaît vérifier votre entrée!",
   "wrong_api_message": "L'objet retourné ne peut pas être analysé! Vérifiez votre URL api!",
   "select_ui_language": "Sélectionnez la langue",
-  "select_favorite_cuisine": "Sélectionnez cuisine préférée"
+  "select_favorite_cuisine": "Sélectionnez cuisine préférée",
+  "list_of_cuisines": ["any", "sushi", "chinese", "sushi", "bbq", "italian"]
 }
